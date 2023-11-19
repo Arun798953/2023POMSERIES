@@ -3,7 +3,6 @@ package com.qa.opencart.base;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.asserts.SoftAssert;
@@ -31,8 +30,8 @@ public class BaseTest {
 	public  void setup() {
 		df= new DriverFactory();
 
-	    prop=df.initprop();
-       driver = df.initdriver(prop);
+	    prop=df.initProp();
+       driver = df.initDriver(prop);
 		loginPage = new LoginPage(driver);
 		softassert=new SoftAssert();
 	}
